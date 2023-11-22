@@ -1,0 +1,13 @@
+body{
+    margin:0px;
+    background-color: #666666;
+}
+
+.square{
+    width: 196px;
+    height: 196px;
+    border: 2px solid blue;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+}

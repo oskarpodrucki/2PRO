@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poprawa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getDATA()">
+
+    <div id="cointainer1">
+        <div id="aside">
+            aside
+        </div>
+    </div>
+
+    <div id="cointainer2">
+        <div id="content1">
+        </div>
+        <div id="content2">
+            <div id="filtr">
+                <input type="radio" name="1" onclick="filtrMIN()">MIN</input>
+                <input type="radio" name="1" onclick="filtrMAX()">MAX</input>
+                <button id="add_filtr">FILTRUJ</button>
+            </div>
+        <div id="invisible">
+
+        </div>
+            <div id="form">
+                    <div id="inputs">
+                        Nazwa<input type="text" id="name"></input>
+                        Ilość<input type="text" id="how_much"></input>
+                    </div>
+
+                    <button id="add_form" onclick="itemSend()">DODAJ</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="cointainer3">
+        <div id="square1">
+            footer
+        </div>
+        <div id="square2">
+            footer
+        </div>
+        <div id="square1">
+            footer
+        </div>
+        <div id="square2">
+            footer
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

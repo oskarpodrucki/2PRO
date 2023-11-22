@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>okok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="okok">
+        <div id="top1">
+
+
+        </div>
+        <div id="top2">
+
+
+        </div>
+
+        <p id="ok"></p>
+
+        <div id="mid1">
+
+            <h1 id="odp">...</h1>
+            <button id="butt1" onclick="porownanie()">Porównaj</button>
+            <button id="butt2" onclick="test()">testuj</button>
+
+        </div>
+        <div id="mid2">
+
+            <input id="licz1">
+
+        </div>
+        <div id="mid3">
+
+            <input id="licz2">
+
+        </div>
+
+        <p id="ok"></p>
+
+        <div id="bot1">
+
+
+        </div>
+
+        <div id="bot2">
+
+
+        </div>
+
+        <div id="bot3">
+
+
+        </div>
+    </div>
+    <script>
+
+        function test() {
+
+            var l1 = document.getElementById("licz1").value
+            var l2 = document.getElementById("licz2").value
+
+            console.log(l1)
+            console.log(l2)
+
+            document.getElementById("odp").innerHTML = "dane pobrane, działa, dane to dla l1: " + l1 + ", a dla l2:" + l2
+            console.log("ok")
+        
+        }
+
+        function porownanie() {
+            var l1 = document.getElementById("licz1").value
+            var l2 = document.getElementById("licz2").value
+
+            if (l1 > l2) {
+                document.getElementById("odp").innerHTML = "Większą liczbą jest: " + l1
+                console.log("ok")
+            } else if (l1 < l2) {
+                document.getElementById("odp").innerHTML = "Większą liczbą jest: " + l2
+                console.log("ok")
+            } else if (l1 = l2) {
+                document.getElementById("odp").innerHTML = "Liczby są równe"
+                console.log("ok")
+            }
+        }
+
+    </script>
+</body>
+
+</html>

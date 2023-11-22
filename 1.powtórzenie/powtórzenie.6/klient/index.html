@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pogczamp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="createCheckBoxes()">
+
+    <div class="container">
+        <div class="interface">
+            <div id="logo">
+                <h1>KONTYNENTY</h1>
+            </div>
+            <div class="boxes">
+                <input type="checkbox" onclick="maxPopulation()">a</input>
+                <input type="checkbox">b</input>
+                <input type="checkbox">c</input>
+            </div>
+        </div>
+
+        <div class="content">
+            <div id="logo">
+                <h1>twój populacja/kraj:</h1>
+            </div>
+            <div>
+                <label for="temp">KRAJ ALE TO POPULACJA</label><br />
+                <input type="range" id="temp" name="temp" min="0" max="100000000" list="markers" width="1000px"  />
+
+                <p>Value: <output id="value"></output></p>
+            </div>
+            <div class="countries">
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+    
+</body>
+
+</html>

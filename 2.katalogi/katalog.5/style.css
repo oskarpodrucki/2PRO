@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    background-color: #666666;
+}
+
+#container{
+    width: 100%;
+    height: 80vh;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+#interface{
+    width: 100%;
+    height: 20vh;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#product{
+    width: 200px;
+    height: 300px;
+    background-color: #666666;
+    border: 2.5px black solid;
+}
+
+#name{
+    width: 100%;
+    height: 30%;
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#price{
+    width: 100%;
+    height: 30%;
+    background-color: palegreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#change{
+    width: 100%;
+    height: 40%;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#add{
+    width: 50%;
+    height: 50%;
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+}
+
+#add:hover{
+    background-color: wheat;
+}
+
+#changeMinus{
+    width: 50%;
+    height: 50%;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+#changeMinus:hover{
+    background-color: lightsalmon;
+}
+
+#changePlus{
+    width: 50%;
+    height: 50%;
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+#changePlus:hover{
+    background-color: lightseagreen;
+}

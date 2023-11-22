@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode & QRcode</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/jsbarcode/3.5.1/JsBarcode.all.min.js"></script>
+    <script type="text/javascript" src="qrcode/jquery.min.js"></script>
+    <script type="text/javascript" src="qrcode/qrcode.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="Barcode">
+
+            <svg id="barcode1"></svg>
+
+            <svg id="barcode2"></svg>
+
+            <svg class="barcode3" jsbarcode-format="upc" jsbarcode-value="123456789012" jsbarcode-textmargin="0"
+                jsbarcode-fontoptions="bold">
+            </svg>
+
+        </div>
+        <div id="QR">
+            <div id="qrcode"></div>
+            <input id="text" type="text" value="https://zs1mm.home.pl/plan/" style="width:80%" /><br />
+            <div id="qrcode" style="width:300px; height:300px; margin-top:px;"></div>
+            </script>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width: 100,
+            height: 100
+        });
+
+        function makeCode() {
+            var elText = document.getElementById("text");
+
+            if (!elText.value) {
+                alert("Input a text");
+                elText.focus();
+                return;
+            }
+
+            qrcode.makeCode(elText.value);
+        }
+
+        makeCode();
+
+        $("#text").
+            on("blur", function () {
+                makeCode();
+            }).
+            on("keydown", function (e) {
+                if (e.keyCode == 13) {
+                    makeCode();
+                }
+            });
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

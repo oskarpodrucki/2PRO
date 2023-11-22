@@ -1,0 +1,46 @@
+#body{
+    margin:0px;
+    background-color: #666666;
+}
+
+
+.container{
+    background-color: #666666;
+    width: 875px;
+    height: 875px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.interface{
+    background-color: lightcoral;
+    width: 100%;
+    height: 15%;
+}
+
+#logo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content{
+    background-color: lightgreen;
+    width: 100%;
+    height: 85%;
+}
+
+.countries{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}

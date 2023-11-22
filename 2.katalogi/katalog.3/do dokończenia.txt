@@ -1,0 +1,4 @@
+1. usuwanie postów: w aplikacji i na stronie
+2. wyświetlanie tytułu posta w jakim jest komentarz - zrobione
+3. odpowiedz na komentarz w postmanie
+4. przycisk wysyłający odpowiedz

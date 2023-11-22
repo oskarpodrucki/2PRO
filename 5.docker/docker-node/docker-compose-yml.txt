@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mynodeapp:
+    image: mynodeapp:1.0
+    container_name: mynodecontainer
+    environment:
+      - test2=from_compose
+    volumes:
+      - ./app:/app

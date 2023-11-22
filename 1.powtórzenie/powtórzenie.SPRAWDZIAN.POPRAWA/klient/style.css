@@ -1,0 +1,97 @@
+body {
+    margin: 0px;
+    background-color: #666666;
+}
+
+#aside {
+    float: left;
+    width: 20%;
+    height: 100vh;
+    background-color: red;
+}
+
+#content1 {
+    float: left;
+    width: 40%;
+    height: 40%;
+    height: 75vh;
+    background-color: lightgreen;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content2 {
+    float: left;
+    width: 40%;
+    height: 40%;
+    height: 75vh;
+    background-color: greenyellow;
+}
+
+#square1 {
+    float: left;
+    height: 25vh;
+    width: 20%;
+    background-color: lightblue;
+}
+
+#square2 {
+    float: left;
+    height: 25vh;
+    width: 20%;
+    background-color: lightcyan;
+}
+
+#filtr {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#form {
+    width: 100%;
+    height: 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#invisible{
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px solid black;
+}
+
+#imputs {
+    margin-bottom: 1px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#add_filtr {
+    width: 100%;
+    height: 10%;
+}
+
+#add_form {
+    width: 100%;
+    height: 50%;
+}
+
+#box{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 120px;
+    height: 120px;
+    background-color: #666666;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+

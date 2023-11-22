@@ -1,0 +1,128 @@
+body {
+    margin: 0px;
+    background-color: black;
+    overflow: hidden;
+}
+
+/*Interfejs*/
+
+#interface {
+    background-color: lightcoral;
+    float: left;
+    width: 20%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+#numer_karty {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#data_karty {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#wlasciciel {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+
+#wyglad_karty {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#wysylka_karty {
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+
+/* Karta */
+
+#karta {
+    background-color: bisque;
+    float: left;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#karta_main{
+    background-image: url("green.png") ;
+    width: 80%;
+    height: 80vh;
+    border-radius: 100px;
+    transition: 1s;
+}
+
+#bank_picture{
+    margin-top: 25px;
+    margin-left: 25px;
+    float: left;
+}
+
+#bank_nazwa{
+    margin-top: 65px;
+    margin-left: 10px;
+    float: left;
+    font-size: 80px;
+    color: rgb(51, 51, 51);
+}
+
+#bank_pin{
+    float: left;
+    margin-top: 150px;
+    margin-left: 200px;
+    font-size: 100px;
+    color: rgb(51, 51, 51);
+}
+
+#bank_waznosc{
+    float: left;
+    margin-top: -75px;
+    margin-left: 560px;
+    font-size: 30px;
+    color: rgb(51, 51, 51);
+}
+
+#bank_wlasciciel{
+    float: left;
+    margin-top: 60px;
+    margin-left: 50px;
+    font-size: 75px;
+    color: rgb(51, 51, 51);
+}
+
+
+#logo_picture{
+    float: left;
+    margin-top: 40px;
+}
+
+#clear{
+    clear: both;
+}
+
+
+/* Wygląd karty */
+

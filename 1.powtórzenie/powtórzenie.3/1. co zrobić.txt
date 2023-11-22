@@ -1,0 +1,5 @@
+1. Wyświetlanie nazwy krajów
+2. Wyświetlanie ogół informacji o kraju | flaga, nazwa, populacja, stolica | wygląd jak w pliku "2. xpp"
+
+3. FIltrowanie po checkboxach
+4. FIltrowanie po inpucie

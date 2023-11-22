@@ -1,0 +1,87 @@
+body {
+    margin: 0px;
+    background-color: #666666;
+}
+
+#top {
+    height: 20vh;
+    width: 100%;
+    background-color: lightgreen;
+}
+
+#aside {
+    height: 60vh;
+    width: 20%;
+    background-color: green;
+    float: left;
+}
+
+#cointainer {
+    height: 60vh;
+    width: 80%;
+    background-color: greenyellow;
+    float: left;
+}
+
+#content {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+.produkt {
+    height: 146px;
+    width: 146px;
+    background-color: #666666;
+    border-radius: 10px;
+    border: 5px solid lightsalmon;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#form1 {
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#form2 {
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#nazwa {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#cena {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#send {
+    width: 200px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#bottom {
+    clear: both;
+    height: 20vh;
+    width: 100%;
+    background-color: yellow;
+}

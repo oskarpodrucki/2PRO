@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karta kredytowa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="interface">
+        <input type="text" id="numer_karty" onchange="getPin()">
+        <input type="date" id="data_karty" onclick="getDate()">
+        <input type="text" id="wlasciciel" onchange="getOwner()">
+
+        <label for="redBackground"><img src="red.png" alt="red_card" width="300"></label>
+        <input type="radio" name="background" id="redBackground" value="red" onclick="changeRed()">
+        <label for="blueBackground"><img src="blue.png" alt="red_card" width="300"></label>
+        <input type="radio" name="background" id="blueBackground" value="blue" onclick="changeBlue()">
+        <label for="greenBackground"><img src="green.png" alt="red_card" width="300"></label>
+        <input type="radio" name="background" id="greenBackground" value="green" onclick="changeGreen()">
+
+    </div>
+
+    <div id="karta">
+
+        <div id="karta_main">
+
+            <img src="PICTURES\bank.png" alt="bank_logo" width="150" id="bank_picture">
+            <h1 id="bank_nazwa">Bank</h1>
+
+            <p id="clear"></p>
+
+            <h1 id="bank_pin">1111 1111 1111 1111</h1>
+            <p id="clear"></p>
+
+            <h1 id="bank_waznosc">00 | 00</h1>
+            <p id="clear"></p>
+
+            <h1 id="bank_wlasciciel">---- ----</h1>
+
+            <img src="PICTURES\logo.png" alt="cardFounder_logo" width="100" id="logo_picture">
+
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

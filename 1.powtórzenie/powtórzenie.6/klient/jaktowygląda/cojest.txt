@@ -1,0 +1,3 @@
+1. automatycznie wyświetlanie przysików kontynetków (jak się doda następny to tez się dodaje nastepny przycisk)
+2. label tkai że wyświetlna populacja największego państwa idzieli po 10 pogczampik
+3. pola tekstowe które wprowadzają dane do bazy

@@ -1,0 +1,41 @@
+1  cd ../image/
+    2  cd/image
+    3  cd ..image/
+    4  cd ../image
+    5  cd image/
+    6  docker build --help
+    7  docker build . -t myname:latest 
+    8  docker run -d -p 8085:80 myname
+    9  docker build . -t myname:latest
+   10  docker container ls -a
+   11  docker contianer rm 9c0f
+   12  sudo docker container rm 9c0f
+   13  sudo docker container stop 9c0f
+   14  sudo docker container rm 9c0f
+   15  docker run -d -p 8085:80 myname
+   16  docker login
+   17  end
+   18  docker login
+   19  docker push podrucki444/myname
+   20  docker pull podrucki444/myname
+   21  docker push podrucki444/myname
+   22  docker push podrucki444/myname:latest
+   23  docker tag myname podrucki444/myname
+   24  docker push podrucki444/myname:latest
+   25  cd ..imagekk//
+   26  cd ..imagekk/
+   27  cd ../image/
+   28  cd ..
+   29  cd imagekk/
+   30  docker pull kamil2295/myname
+   31  docker container ls -a
+   32  sudo docker images ls
+   33  docker build . -t test:latest 
+   34  docker run -d -p 8090:80 test
+   35  docker run -p 8090:80 -d kamil2295/myname
+   36  cd ~
+   37  ls -l
+   38  sudo rm -r ./app/
+   39  sudo rm -r ./image/
+   40  sudo rm -r ./wordpress/
+   41  history

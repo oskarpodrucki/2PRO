@@ -1,0 +1,11 @@
+#Pobiera obraz 
+FROM httpd:2.4-alpine
+
+#
+WORKDIR /usr/local/apache2/htdocs/  
+
+#Przekopiowanie plików do WORKDIR
+COPY . .
+
+#Port
+EXPOSE 80

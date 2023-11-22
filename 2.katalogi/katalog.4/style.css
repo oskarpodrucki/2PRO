@@ -1,0 +1,35 @@
+body{
+    margin: 0px;
+    background-color: #666666;
+}
+
+#container{
+    width: 850px;
+    height: 850px;
+    margin: auto;
+    margin-top: 30px;
+    border: 5px black solid;
+}
+
+#Barcode{
+    height: 50%;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#QR{
+    height: 50%;
+    width: 100%;
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+

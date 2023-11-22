@@ -1,0 +1,42 @@
+wyświetlanie zamówień
+zmienianie statusu zamówienia
+
+dodaj zamówienie produkt przez api
+
+dodaj produkt bez ceny
+zaktualizuj cene produktu
+
+usuń produkt
+
+
+api:
+localhost/wordpress/wp-json/wp/v2/posts
+
+192.168.15.10/wordpress/wp-json/wp/v2/posts/?title=elo żelo&content=elo żelo&status=publish
+
+192.168.15.10/wordpress/wp-json/wp/v2/posts/18
+
+192.168.15.10/wordpress/wp-json/wc/v3/orders?consumer_key=ck_xxx&consumer_secret=cs_xxx
+
+192.168.15.10/wordpress/wp-json/wc/v3/products?name=bmp1&regular_price=5&description=bojowy wóz piechoty prvalo
+
+
+http://192.168.15.10/wordpressOSKAR/wp-json/wc/v3/products
+
+http://192.168.15.10/wordpressOSKAR/wp-json/wp/v2/posts/6/?status=publish
+
+192.168.15.10/wordpress/wp-json/wp/v2/posts/18
+
+192.168.15.10/wordpress/wp-json/wc/v3/orders?consumer_key=ck_xxx&consumer_secret=cs_xxx
+
+192.168.15.10/wordpress/wp-json/wc/v3/products?name=bmp1&regular_price=5&description=bojowy wóz piechoty prvalo
+
+192.168.15.10/wordpress/wp-json/wc/v3/products?name=bmp1&description=bojowy wóz piechoty prvalo
+
+localhost/wordpress/wp-json/wc/v3/products?consomer_key=ck_261c90faca73e4de28f136026a7bf43afeea5cdb&consumer_secret=cs_294a41d55b9d0aae7b19429095dccd23e9e80d24
+
+http://192.168.15.10/wordpressOSKAR/wp-json/wp/v2/comments
+
+http://localhost/wordpressOSKAR/wp-json/wp/v2/posts/
+
+http://localhost/wordpressOSKAR/wp-json/wc/v3/products

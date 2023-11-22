@@ -1,0 +1,8 @@
+FROM node:21-alpine3.17
+WORKDIR /app
+COPY ./app/* /app/
+CMD [ "npm", "init" ]
+CMD [ "npm", "install", "express" ]
+CMD [ "npm", "install", "cors" ]
+
+cmd jest do wyjebania

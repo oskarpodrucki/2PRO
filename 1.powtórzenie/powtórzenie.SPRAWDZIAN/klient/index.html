@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>powtórzenie.SPRAWDZIAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getProducts()">
+
+    <div id="top">
+        top
+    </div>
+
+    <div id="aside">
+        aside
+    </div>
+
+    <div id="cointainer">
+        <div id="content">
+            <div class="produkt">
+                <h1>:nazwa:</h1>
+                <h1>:cena</h1>
+            </div>
+        </div>
+        <div id="form">
+            form
+            <div id="form1">
+                <input type="radio" name="bob" onclick="productsMIN()">min</checkbox>
+                <input type="radio" name="bob" onclick="productsMAX()">max</checkbox>
+            </div>
+            <div id="form2">
+                <input id="nazwa"></input>
+                <input id="cena"></input>
+                <button id="send" onclick="sendProduct()">Wyślij</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom">
+        footer
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

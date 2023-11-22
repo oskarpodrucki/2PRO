@@ -1,0 +1,5 @@
+1. Wyczyszczanie kwadrata - Zrobione
+2. Animacja wyjścia - Zrobione
+3. Dodawanie - Zrobione
+4. Wyświetlanie sumy w stopce - Zrobione
+5. Kwestie css-owe - Zrobione

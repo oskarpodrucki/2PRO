@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    container_name: mysql
+    volumes:
+      - db:/var/library/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=zaq12wsx
+  
+  wordpress:
+    image: wordpress
+    container_name: wordpress
+    volumes:
+     - wordpress:/var/www/html
+    ports:
+      - 8080:80
+    environment:
+      - WORDPRESS_DB_HOST=db
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_PASSWORD=zaq12wsx
+      - WORDPRESS_DB_NAME=wordpress
+    depends_on:
+      - db
+  
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=zaq12wsx
+    depends_on:
+      - db
+
+volumes:
+  db:
+  wordpress:

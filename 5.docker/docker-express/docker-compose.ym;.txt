@@ -1,0 +1,8 @@
+version: '3'
+services:
+  express:
+    image: myexpressapp1.0
+    container_name: myexpresscontianer
+    volumes:
+      - ./app:/app
+  

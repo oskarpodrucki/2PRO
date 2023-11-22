@@ -1,0 +1,13 @@
+const express = require(express)
+const cors = require(cors)
+
+const app = express
+
+app.use(cors())
+const port = 3000
+
+var gigachad = {Imie: "Oskar", Nazwisko: "Podrucki"}
+
+app.get("/", function(req, res){
+    res.json(gigachad)
+})

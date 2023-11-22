@@ -1,0 +1,136 @@
+/* Główne */
+body {
+    margin: 0px;
+}
+
+/*Intefejs*/
+
+#interfejs {
+    float: left;
+    width: 30%;
+    height: 100vh;
+    background-color: coral;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#int_inside{
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#kontynenty{
+    background-color: white;
+    border-radius: 30px;
+    width: 75%;
+    height: 40%;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu{
+    border-radius: 30px;
+    background-color: white;
+    width: 75%;
+    height: 5%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+/*Główne*/
+
+#xpp {
+    float: left;
+    width: 70%;
+    height: 100vh;
+    background-color: lightyellow;
+
+    /*bloki wewnątrz*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+}
+
+.blok{
+    background-color: grey;
+    width: 300px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.flaga {
+    background-color: greenyellow;
+    float: left;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_flaga {
+    height: 75px;
+    width: 100px;
+}
+
+.nazwa{
+    background-color: lightblue;
+    float:left;
+    height: 50%;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stolica{
+    background-color: lightcoral;
+    float:left;
+    height: 50%;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#populacja{
+    background-color: lightslategrey;
+    float:left;
+    height: 50%;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#input{
+    width: 75%;
+    height: 50px;
+    border-radius: 25px;
+    float: left;
+}
+
+/*Inne*/
+
+#clear {
+    clear: both;
+}

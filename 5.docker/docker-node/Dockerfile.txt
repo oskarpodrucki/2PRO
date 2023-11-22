@@ -1,0 +1,5 @@
+FROM node:21-alpine3.17
+WORKDIR /app
+COPY ./app/* /app/
+ENV test=Oskar_Podrucki
+CMD [ "node", "index.js" ]

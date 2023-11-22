@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Państwa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getCountries()">
+
+    <!--Interfejs-->
+    <div id="interfejs">
+        <div id="int_inside">
+
+            <h1 id="menu">M E N U</h1>
+
+            <div id="kontynenty">
+                <h2>K O N T Y N E N T Y</h2>
+                <label><input type="checkbox" id="AfricaCheckbox" onclick="filterCountries()">A F R Y K A</label>
+                <label><input type="checkbox" id="AsiaCheckbox" onclick="filterCountries()">A Z J A</label>
+                <label><input type="checkbox" id="EuropeCheckbox" onclick="filterCountries()">E U R O P A</label>
+                <label><input type="checkbox" id="AmericasCheckbox" onclick="filterCountries()">A M E R Y K I</label>
+                <label><input type="checkbox" id="OceaniaCheckbox" onclick="filterCountries()">O C E A N I A</label>
+            </div>
+
+            <input type="text" id="search">
+        </div>
+    </div>
+
+
+    <!--Główne-->
+    <div id="xpp">
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

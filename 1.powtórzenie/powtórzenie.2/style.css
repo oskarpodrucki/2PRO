@@ -1,0 +1,153 @@
+/*ogólne*/
+
+body {
+    margin: 0px;
+}
+
+#interface {
+    background-color: sandybrown;
+    float: left;
+    width: 25%;
+    height: 75vh;
+    align-items: center;
+}
+
+#main {
+    background-color: lightskyblue;
+    float: left;
+    width: 75%;
+    height: 75vh;
+}
+
+#kwadrat {
+    background-color: aliceblue;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 150px;
+    transition: 0.75s;
+
+    /*kwadraty wewnątrz*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+
+    gap: 2px;
+    overflow-y: scroll;
+}
+
+#footer {
+    background-color: lightgreen;
+    width: 100%;
+    height: 25vh;
+}
+
+#clear {
+    clear: both;
+}
+
+/*Przyciski*/
+
+#act1 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: lime;
+    display: block;
+    margin: auto;
+    margin-top: 60px;
+    transition: 0.5s;
+}
+
+#act1:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+
+#act2 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: coral;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+#act2:hover {
+    background-color: lightcoral;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+#act3 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: lightseagreen;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+#act3:hover {
+    background-color: lightblue;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+#act4 {
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: yellow;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+#act4:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+
+/*dodane kwadraty*/
+.addedkwadrat {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    border: solid black 2px;
+    border-radius: 20px;
+    -webkit-animation: addedkwadrat 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: addedkwadrat 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.shadow-inset-center {
+    -webkit-animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-inset-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-bck-center {
+    -webkit-animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: slide-bck-center 0.45s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
