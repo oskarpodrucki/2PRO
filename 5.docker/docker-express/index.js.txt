@@ -1,13 +1,17 @@
-const express = require(express)
-const cors = require(cors)
+const express = require('express')
 
-const app = express
+app = express();
 
-app.use(cors())
-const port = 3000
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
 
-var gigachad = {Imie: "Oskar", Nazwisko: "Podrucki"}
 
-app.get("/", function(req, res){
-    res.json(gigachad)
-})
+var person = { name: `${process.env.name}`, surname: `${process.env.surname}` }
+
+
+app.get('/', (req, res) =>
+    res.json(person)
+)
+
+app.listen(5000,
+    () => console.log(`⚡️ Server działa na porcie: 5000`));

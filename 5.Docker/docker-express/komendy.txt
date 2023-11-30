@@ -1,0 +1,96 @@
+1  clear
+    2  history
+    3  ls -lls l-
+    4  sudo docker compose up -d
+    5  ls -l
+    6  cd app/
+    7  ls
+    8  sudo docker compose up -d
+    9  sudo docker hello-world
+   10  sudo docker run hello-worlds
+   11  sudo docker run hello-world
+   12  sudo mkdir app
+   13  sudo rm -r app
+   14  cdd express-docker
+   15  cd express-docker
+   16  sudo mkdir app
+   17  sudo touch index.js
+   18  sudo rm -r index.js
+   19  cd app
+   20  suddo touch index.js
+   21  sudo touch index.js
+   22  cd ..
+   23  sudo touch Dockerfile
+   24  sudo touch docker-compose.yml
+   25  sudo touch .dockerignore
+   26  sudo nano Dockerfile
+   27  sudo nano docker-compose
+   28  sudo nano docker-compose.yml
+   29  sudo code
+   30  sudo usermod  $USER
+   31  sudo usermod -aG docker $USER
+   32  sudo nano .dockerignore
+   33  sudo nano docker-compose.yml
+   34  sudo nano app/index.js
+   35  docker compose up -d
+   36  docker login
+   37  docker compose up -d
+   38  docker build -t mynodeapp:1.0 .
+   39  docker run -e test=bardzolubiejescplacki  mynodeapp:1.0
+   40  cd ..
+   41  cd expressapp
+   42  npm init -y
+   43  npm install express
+   44  node index.js
+   45  ip addr
+   46  node index.js
+   47  node
+   48  docker pull mrbartek302/express
+   49  sudo docker pull mrbartek302/express
+   50  docker pull siqek/mynodeapp
+   51  sudo docker pull siqek/mynodeapp
+   52  node index.js
+   53  docker build -f Dockerfile -t myexpressapp .
+   54  sudo apt update
+   55  docker build -f Dockerfile -t myexpressapp:1.0 .
+   56  docker run -d -it –-rm -p 3000:3000 -e name=Oskar -e surname=Podrucki –name myexpresscontainer myexpressapp:1.0
+   57  sudo docker run -d -it –-rm -p 3000:3000 -e name=Oskar -e surname=Podrucki –name myexpresscontainer myexpressapp:1.0
+   58  sudo docker run --help
+   59  sudo docker run -d -it --rm -p 3000:3000 -e name=Oskar -e surname=Podrucki --name myexpresscontainer myexpressapp:1.0
+   60  sudo docker container ps
+   61  node index.js
+   62  sudo docker container stop 
+   63  docker container --help
+   64  docker container stop
+   65  sudo docker container ps 
+   66  sudo docker container stop 14c2
+   67  sudo docker container start 14c2
+   68  docker container ps 
+   69  docker build -f Dockerfile.dev -t myexpressapp:1.0 .
+   70  sudo docker run -d -it --rm -p 5000:5000 -e name=Oskar -e surname=Podrucki --name myexpresscontainer myexpressapp:1.0
+   71  docker container ps
+   72  docner container stop be39
+   73  docker container stop be39
+   74  docker build -f Dockerfile.dev -t myexpressapp:1.0 .
+   75  sudo apt uptdate
+   76  sudo apd update
+   77  sudo apt update
+   78  docker build -f Dockerfile.dev -t myexpressapp:1.0 .
+   79  sudo docker run -d -it --rm -p 5000:5000 -e name=Oskar -e surname=Podrucki --name myexpresscontainer myexpressapp:1.0
+   80  docker contianer ps
+   81  docker container ps
+   82  docker container stop a62552
+   83  sudo docker run -d -it --rm -p 5000:5000 -e name=Jebana -e surname=Małpa --name myexpresscontainer myexpressapp:1.0
+   84  sudo docker container ps
+   85  docker container stop 751d4
+   86  docker push podrucki444 myexpressapp
+   87  docker push podrucki444/myexpressapp
+   88  docker push podrucki444/myexpressapp:latest
+   89  docker tag myexpressapp podrucki444/myexpressapp
+   90  docker push podrucki444/myexpressapp:latest
+   91  docker push podrucki444/myexpressapp:1.0
+   92  docker push podrucki444/myexpressapp:latest
+   93  docker tag myexpressapp podrucki444/myexpressapp:1.0
+   94  docker tag myexpressapp:1.0 podrucki444/myexpressapp:1.0
+   95  docker push podrucki444/myexpressapp:1.0
+   96  history

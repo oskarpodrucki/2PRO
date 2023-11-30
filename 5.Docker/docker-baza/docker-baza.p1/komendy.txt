@@ -1,0 +1,15 @@
+docker volume prume
+   74  clear
+   75  docker volume prune
+   76  mkdir mydbapp
+   77  cd mydbapp
+   78  sudo apt install npm
+   79  npm install npm:latest
+   80  npm install express
+   81  npm install cors
+   82  npm install mysql2
+   83  docker build -t mydbapp .
+   84  docker compose up -d
+   85  docker build -t mydbapp .
+   86  docker compose up -d
+   87  history

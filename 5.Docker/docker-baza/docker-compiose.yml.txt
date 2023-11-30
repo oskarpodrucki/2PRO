@@ -1,0 +1,38 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    container_name: mysql2
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=zaq12wsx
+      - MYSQL_ROOT_DATABASE=task
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin2
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=root 
+      - PMA_PASSWORD=zaq12wsx
+    depends_on:
+      - db
+  
+  backend:
+    image: baza
+    container_name: backendELO
+    ports:
+      - 3000:3000
+    environment:
+      - host=db
+      - password=zaq12wsx
+      - database=task
+    depends_on:
+      - db
+
+volumes:
+  db:
+  db:
