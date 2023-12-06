@@ -1,0 +1,35 @@
+cd imie
+   75  docker build -t test .
+   76  docker compose up -d
+   77  docker build -t test .
+   78  docker compose up -d
+   79  docker build -t test .
+   80  docker compose up -d
+   81  docker push podrucki444/test
+   82  docker push podrucki444/test:1.0
+   83  docker login
+   84  docker build -t podrucki444/test:1.0 .
+   85  docker compose up -d
+   86  docker push podrucki444/test:1.0
+   87  docker build -t podrucki444/test:1.0 .
+   88  docker push podrucki444/test:1.0
+   89  docker pull bartoszpietka/myname
+   90  docker pull bartoszpietka/myname:1.0
+   91  docker image ps
+   92  docker 
+   93  docker -help
+   94  docker images ls
+   95  docker images ls -l
+   96  docker images ls -a
+   97  docker run bartoszpietka/myname:1.0
+   98  docker run bartoszpietka/myname
+   99  docker run bartoszpietka/myname:1.0
+  100  docker run test
+  101  docker run -p 5001:80 bartoszpietka/myname:1.0
+  102  docker run -p 8080:80 bartoszpietka/myname:1.0
+  103  docker run -p 8081:80 bartoszpietka/myname:1.0
+  104  docker build -t podrucki444/test:1.0 .
+  105  docker push podrucki444/test:1.0
+  106  docker pull bartoszpietka/myname:1.0
+  107  docker run -p 8081:80 bartoszpietka/myname:1.0
+  108  history

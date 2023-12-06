@@ -1,0 +1,10 @@
+version: '3'
+services:
+  imie:
+    image: httpd:2.4.58-alpine
+    container_name: imie2
+    ports:
+      - 5000:80
+    volumes:
+      - .:/usr/local/apache2/htdocs/
+
