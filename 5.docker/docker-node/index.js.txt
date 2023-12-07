@@ -1,1 +1,0 @@
-console.log(`my third node container ${process.env.test} ${process.env.test2}`)
