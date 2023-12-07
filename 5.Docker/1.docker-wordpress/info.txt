@@ -1,0 +1,11 @@
+JAK ODPALIĆ?
+
+1. stwórz folder
+2. w folderze stwórz plik docker-compose.yml
+3. wprowadz w nim potrzebny kod
+4. przejdz do tego folderu cd "nazwa folderu"
+5. docker-compose up -do
+
+6. przejdz do phpmyadmin, "adres":8081 i stwórz bazę wordpress
+7. przejdz do wordpressa, "adres";8080 i skonfiguruj wordpressa
+8. powinno działać

@@ -1,0 +1,11 @@
+JAK ODPALIĆ?
+
+1. stwórz folder
+2. w folderze stwórz plik docker-compose.yml, Dockerfile, index.html
+3. wprowadz w do nich potrzebny kod
+4. przejdz do tego folderu cd "nazwa folderu"
+5. docker build -t imie .
+5. docker-compose up -d
+
+6. przejdz do strony, "adres":3000 
+7. powinno działać
