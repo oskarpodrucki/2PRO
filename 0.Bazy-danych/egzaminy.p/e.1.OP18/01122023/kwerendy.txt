@@ -1,0 +1,18 @@
+kw1:
+
+CREATE TABLE `baza1`.`uzytkownicy` (`id` INT NOT NULL AUTO_INCREMENT , `login` VARCHAR(50) NOT NULL , `haslo` VARCHAR(50) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+kw2:
+
+INSERT INTO `uzytkownicy` ('id','login', 'haslo') VALUES ('1','oskar,'zaq12wsx;);
+
+
+kw3:
+
+SELECT `login` FROM `uzytkownicy`;
+
+
+kw4:
+
+SELECT `id`, `login` FROM `uzytkownicy` WHERE haslo LIKE "%7";

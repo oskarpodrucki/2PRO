@@ -1,0 +1,4 @@
+https://hub.docker.com/_/php <=
+
+
+docker run -d -p 8080:80 --name my-apache-php-app -v /home/oskar/php/:/var/www/html php:7.2-apache
