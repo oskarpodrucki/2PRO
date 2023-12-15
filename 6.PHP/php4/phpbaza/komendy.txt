@@ -1,0 +1,8 @@
+cd phpbaza
+    2  dir
+    3  ls
+    4  okok
+    5  docker compose up -d
+    6  docker build -t podrucki444/phpmysqli:1.0 .
+    7  docker compose up -d
+    8  history

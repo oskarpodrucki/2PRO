@@ -1,0 +1,36 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    container_name: db
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=zaq12wsx
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - 8081:80
+    environment:
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=zaq12wsx
+    depends_on:
+      - db
+
+  php:
+    image: podrucki444/phpmysqli:1.0
+    container_name: php
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8080:80
+    depends_on:
+      - db
+
+volumes:
+  db:
