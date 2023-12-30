@@ -1,96 +1,93 @@
 body {
-    margin: 0px;
-    background-color: #666666;
+	margin: 0px;
+	background-color: #666666;
 }
 
 /* content */
 
-#content{
-    width: 75%;
-    height: 100vh;
-    background-color: yellowgreen;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    float: left;
-    overflow-y:scroll
+#content {
+	width: 75%;
+	height: 100vh;
+	background-color: yellowgreen;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	float: left;
+	overflow-y: scroll;
 }
 
 /* produkty */
 
-.Div{
-    width: 250px;
-    height: 300px;
-    background-color: #666666;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid black;
-    margin-left: 10px;
-    margin-top: 10px;
+.Div {
+	width: 250px;
+	height: 300px;
+	background-color: #666666;
+	display: flex;
+	flex-direction: column;
+	border: 3px solid black;
+	margin-left: 10px;
+	margin-top: 10px;
 }
 
-.Div_h1{
-    width: 250px;
-    height: 300px;
-    background-color: #666666;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.Div_h1 {
+	width: 250px;
+	height: 300px;
+	background-color: #666666;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.h1{
-    font-size: 32px;
-    color: whitesmoke;
+.h1 {
+	font-size: 32px;
+	color: whitesmoke;
 }
 
-
-.Div_change{
-    width: 250px;
-    height: 300px;
-    background-color: #666666;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    border-top: 2px black solid;
+.Div_change {
+	width: 250px;
+	height: 300px;
+	background-color: #666666;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-top: 2px black solid;
 }
 
-.button_change{
-    cursor: pointer;
+.button_change {
+	cursor: pointer;
 }
-
 
 /* formularz */
 
-#form{
-    width: 25%;
-    height: 100vh;
-    background-color: green;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+#form {
+	width: 25%;
+	height: 100vh;
+	background-color: green;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 }
 
-#addP{
-    height: 50%;
-    width: 75%;
-    background-color: #666666;
-    border: 3px solid black;
+#addP {
+	height: 50%;
+	width: 75%;
+	background-color: #666666;
+	border: 3px solid black;
 }
 
-#inputs{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-    height: 85%;
+#inputs {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 15px;
+	height: 85%;
 }
 
-#addButton{
-    width: 100%;
-    height: 30px;
+#addButton {
+	width: 100%;
+	height: 30px;
 }
-

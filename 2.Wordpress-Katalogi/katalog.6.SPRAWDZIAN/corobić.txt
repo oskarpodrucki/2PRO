@@ -1,0 +1,19 @@
+1. Odpal:
+    a) VSC
+    b) Xampp
+        1)APACHE
+        2)SQL
+    c) Postmana (opcjonalnie)
+
+2. Otwórz w przeglądarce:
+    a) Aplikację (index.html)
+    b) Wordpressa (localhost/wordpress)
+    c) Phpmyadmin (localhost/Phpmyadmin)
+
+3. Do wordpressa pobierz odpowiednie wtyczki:
+    a)Woocommerce
+    b)JSON Basic Authentication (https://github.com/WP-API/Basic-Auth)
+
+4. W VSC pozmieniaj wartości w app.js dla odpowiadających tobie 👍👍👍❗❗❗
+
+4. Możesz działać z aplikacją 👍
