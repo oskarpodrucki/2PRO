@@ -45,7 +45,7 @@
                     echo "<tr>";
 
                     for ($j = 0; $j < $szerokosc; $j++) {
-                        $cellNumber = ($j - 1) * $szerokosc + $i;
+                        $cellNumber = $j * $wysokosc + $i + 1;
                         echo "<td>" . $cellNumber . "</td>";
                     }
 

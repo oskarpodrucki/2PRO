@@ -1,0 +1,44 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Helvetica;
+}
+
+#uczniowie {
+	width: 98%;
+	height: 500px;
+	background-color: limegreen;
+	margin: 10px;
+	padding: 10px;
+    gap: 10px;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    overflow: scroll;
+}
+
+.uczen {
+	width: 500px;
+	height: 100px;
+    font-size: 110%;
+    font-weight: bolder;
+	background-color: green;
+}
+
+.prawy {
+	float: right;
+    margin: 10px;
+    padding: 10px;
+}
+
+.lewy {
+	float: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+.red{
+    background-color: red;
+}
