@@ -9,11 +9,10 @@
 
 <body>
     <?php
-
     session_start();
-    $student = $_SESSION['studentid'];
+    $studentid = $_SESSION['id'];
 
-    //Dane do połączenia z bazą
+    // Dane do połączenia z bazą
     $serwer = "localhost";
     $user = "root";
     $pass = "";
@@ -22,27 +21,26 @@
     // Stwórz połączenie
     $conn = mysqli_connect($serwer, $user, $pass, $db);
 
-    // Sprawdz połączenie
+    // Sprawdź połączenie
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM `uczniowie` WHERE id = $student;";
+    $sql = "SELECT * FROM `uczniowie` WHERE id = 1";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<h1>edycja ucznia</h1>";
-            echo "<form action='edit.php' method='post'>";
-            echo "<input type='text' placeholder='imie' value=" . $row['imie'] . " name='name'>";
-            echo "<input type='text' placeholder='nazwisko' value=" . $row['nazwisko'] . " name='surname'>";
-            echo "<input type='text' placeholder='wiek' value=" . $row['wiek'] . " name='age'>";
+            echo "<form action='edit.php' method='POST'>";
+            echo "<input type='text' placeholder='imie' value='" . $row['imie'] . "' name='name'>";
+            echo "<input type='text' placeholder='nazwisko' value='" . $row['nazwisko'] . "' name='surname'>";
+            echo "<input type='text' placeholder='wiek' value='" . $row['wiek'] . "' name='age'>";
             echo "<input type='submit'>";
             echo "</form>";
         }
     } else {
-        echo "0 resultatów";
+        echo "0 rezultatów";
     }
 
     if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['age'])) {
@@ -51,7 +49,7 @@
         $editAge = $_POST['age'];
 
         // Wyślij dane
-        $sqlEdit = "UPDATE `uczniowie` SET `imie`='$editName',`nazwisko`='$editSurname',`wiek`='$editAge' WHERE id = $student";
+        $sqlEdit = "UPDATE `uczniowie` SET `imie`='$editName',`nazwisko`='$editSurname',`wiek`='$editAge' WHERE id = 1";
 
         if ($conn->query($sqlEdit) === TRUE) {
             echo "zedytowano rekord";
@@ -61,8 +59,6 @@
 
         $conn->close();
     }
-
-
 
     ?>
 </body>

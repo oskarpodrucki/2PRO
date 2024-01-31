@@ -9,16 +9,13 @@
 </head>
 
 <body>
-
-
-
     <div id="baner">
         <h1>Uczniowie</h1>
     </div>
 
     <div id="uczniowie">
 
-        <!-- //wyswietlanie -->
+        <!-- Wyswietlanie -->
         <?php
 
         $serwer = "localhost";
@@ -29,7 +26,7 @@
         $conn = mysqli_connect($serwer, $user, $pass, $db);
 
         if (!$conn) {
-            die("nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
+            die("Nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
         }
 
         $sql = "SELECT * FROM `uczniowie`;";
@@ -43,7 +40,7 @@
                 echo "</div>";
             }
         } else {
-            echo "0 resultatów";
+            echo "0 rezultatów";
         }
 
         mysqli_close($conn);
@@ -64,7 +61,7 @@
         <br> <br> <br>
 
         <form action="baza.php" method="POST">
-            <label for="uczniowie"> uczniowie w bazie: </label>
+            <label for="uczniowie"> Uczniowie w bazie: </label>
             <select name="uczniowie">
 
                 <?php
@@ -77,7 +74,7 @@
                 $conn = mysqli_connect($serwer, $user, $pass, $db);
 
                 if (!$conn) {
-                    die("nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
+                    die("Nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
                 }
 
                 $sql = "SELECT * FROM `uczniowie`;";
@@ -89,7 +86,7 @@
                         echo "<option value=" . $row['id'] . ">" . $row['imie'] . " " . $row['nazwisko'] . " " . $row['wiek'] . "</option>";
                     }
                 } else {
-                    echo "0 resultatów";
+                    echo "0 rezultatów";
                 }
 
                 mysqli_close($conn);
@@ -100,7 +97,7 @@
             <input type="submit" value="usuń">
         </form>
 
-        <!-- usuwanie -->
+        <!-- Usuwanie -->
         <?php
 
         if (isset($_POST['uczniowie'])) {
@@ -115,15 +112,13 @@
             $conn = mysqli_connect($serwer, $user, $pass, $db);
 
             if (!$conn) {
-                die("nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
+                die("Nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
             }
 
-
-            $sqlDel = "DELETE FROM `uczniowie` WHERE `uczniowie`.`id` = $student";
-
+            $sqlDel = "DELETE FROM `uczniowie` WHERE `id` = $student";
 
             if ($conn->query($sqlDel) === TRUE) {
-                echo "Usunięto rekord";
+                echo "";
             } else {
                 echo "Error: " . $sqlDel . "<br>" . $conn->error;
             }
@@ -131,40 +126,37 @@
             mysqli_close($conn);
         }
 
-
         ?>
 
 
-        <!-- dodawanie -->
+        <!-- Dodawanie -->
         <?php
 
         if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['age'])) {
-            //Pobrane dane
+            // Pobrane dane
             $name = $_POST['name'];
             $surname = $_POST['surname'];
             $age = $_POST['age'];
 
-
-            //Dane do połączenia z bazą
+            // Dane do połączenia z bazą
             $serwer = "localhost";
             $user = "root";
             $pass = "";
             $db = "uczniowie";
 
-
             // Stwórz połączenie
             $conn = mysqli_connect($serwer, $user, $pass, $db);
 
-            // Sprawdz połączenie
+            // Sprawdź połączenie
             if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
             }
 
             // Wyślij dane
-            $sql = "INSERT INTO `uczniowie`(`id`, `imie`, `nazwisko`, `wiek`) VALUES ( NULL,'$name','$surname','$age');";
+            $sql = "INSERT INTO `uczniowie`(`imie`, `nazwisko`, `wiek`) VALUES ('$name','$surname','$age');";
 
             if ($conn->query($sql) === TRUE) {
-                echo "Dodany nowy rekord";
+                echo "";
             } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
             }
@@ -179,7 +171,7 @@
         <br> <br> <br>
 
         <form action="edit.php" method="POST">
-            <label for="edit"> uczeń do edytowania: </label>
+            <label for="edit"> Uczeń do edytowania: </label>
             <select name="edit">
 
                 <?php
@@ -192,7 +184,7 @@
                 $conn = mysqli_connect($serwer, $user, $pass, $db);
 
                 if (!$conn) {
-                    die("nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
+                    die("Nie udało się połączyć z bazą, ERROR: " . mysqli_connect_error());
                 }
 
                 $sql = "SELECT * FROM `uczniowie`;";
@@ -204,8 +196,11 @@
                         echo "<option value=" . $row['id'] . ">" . $row['imie'] . " " . $row['nazwisko'] . " " . $row['wiek'] . "</option>";
                     }
                 } else {
-                    echo "0 resultatów";
+                    echo "0 rezultatów";
                 }
+
+                mysqli_close($conn);
+
                 ?>
 
             </select>
@@ -213,15 +208,19 @@
         </form>
 
         <?php
-        
-        session_start();
-        $student = $_POST['uczniowie'];
 
-        $_SESSION['studentid'] = $student;
+        if (isset($_POST['edit'])) {
+            session_start();
+            $studentid = $_POST['edit'];
+            $_SESSION['id'] = $studentid;
+            header("Location: edit.php");
+            exit();
+        } else {
+            echo "";
+        }
 
         ?>
     </div>
-
 </body>
 
 </html>
