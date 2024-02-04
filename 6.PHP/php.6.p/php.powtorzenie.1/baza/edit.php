@@ -8,59 +8,46 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-    $studentid = $_SESSION['id'];
 
-    // Dane do połączenia z bazą
+    <!-- wyświetlanie danych i tworzenie formularza -->
+    <?php
+
+    $studentid = isset($_POST['edit']) ? $_POST['edit'] : '';
+    echo $studentid;
+
+    echo "<p name='idEdit' value=$studentid></p>";
+
     $serwer = "localhost";
     $user = "root";
     $pass = "";
     $db = "uczniowie";
 
-    // Stwórz połączenie
     $conn = mysqli_connect($serwer, $user, $pass, $db);
 
-    // Sprawdź połączenie
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "SELECT * FROM `uczniowie` WHERE id = 1";
+    $sql = "SELECT * FROM `uczniowie` WHERE id = $studentid";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<h1>edycja ucznia</h1>";
-            echo "<form action='edit.php' method='POST'>";
-            echo "<input type='text' placeholder='imie' value='" . $row['imie'] . "' name='name'>";
-            echo "<input type='text' placeholder='nazwisko' value='" . $row['nazwisko'] . "' name='surname'>";
-            echo "<input type='text' placeholder='wiek' value='" . $row['wiek'] . "' name='age'>";
+            echo "<form action='baza.php' method='POST'>";
+            echo "<input type='text' placeholder='imie' value='" . $row['imie'] . "' name='nameEdit'>";
+            echo "<input type='text' placeholder='nazwisko' value='" . $row['nazwisko'] . "' name='surnameEdit'>";
+            echo "<input type='text' placeholder='wiek' value='" . $row['wiek'] . "' name='ageEdit'>";
             echo "<input type='submit'>";
             echo "</form>";
         }
     } else {
-        echo "0 rezultatów";
+        echo "";
     }
 
-    if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['age'])) {
-        $editName = $_POST['name'];
-        $editSurname = $_POST['surname'];
-        $editAge = $_POST['age'];
-
-        // Wyślij dane
-        $sqlEdit = "UPDATE `uczniowie` SET `imie`='$editName',`nazwisko`='$editSurname',`wiek`='$editAge' WHERE id = 1";
-
-        if ($conn->query($sqlEdit) === TRUE) {
-            echo "zedytowano rekord";
-        } else {
-            echo "Error: " . $sqlEdit . "<br>" . $conn->error;
-        }
-
-        $conn->close();
-    }
-
+    $conn->close();
     ?>
+
 </body>
 
 </html>

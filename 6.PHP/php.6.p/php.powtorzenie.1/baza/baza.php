@@ -15,7 +15,7 @@
 
     <div id="uczniowie">
 
-        <!-- Wyswietlanie -->
+        <!-- wyświetlanie uczniów -->
         <?php
 
         $serwer = "localhost";
@@ -49,8 +49,11 @@
 
     </div>
 
+    <br>
+
     <div id="stopka">
 
+        <h3>Dodaj ucznia:</h3>
         <form action="baza.php" method="POST">
             <input type="text" placeholder="imie" name="name">
             <input type="text" placeholder="nazwisko" name="surname">
@@ -58,12 +61,48 @@
             <input type="submit">
         </form>
 
+        <!-- dodawanie -->
+        <?php
+
+        if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['age'])) {
+
+            $name = $_POST['name'];
+            $surname = $_POST['surname'];
+            $age = $_POST['age'];
+
+            $serwer = "localhost";
+            $user = "root";
+            $pass = "";
+            $db = "uczniowie";
+
+            $conn = mysqli_connect($serwer, $user, $pass, $db);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "INSERT INTO `uczniowie`(`imie`, `nazwisko`, `wiek`) VALUES ('$name','$surname','$age');";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "";
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+
+            $conn->close();
+        } else {
+            echo "";
+        }
+
+        ?>
+
         <br> <br> <br>
 
         <form action="baza.php" method="POST">
             <label for="uczniowie"> Uczniowie w bazie: </label>
             <select name="uczniowie">
 
+                <!-- wyświetlanie selecta dla usuwania -->
                 <?php
 
                 $serwer = "localhost";
@@ -129,51 +168,13 @@
         ?>
 
 
-        <!-- Dodawanie -->
-        <?php
-
-        if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['age'])) {
-            // Pobrane dane
-            $name = $_POST['name'];
-            $surname = $_POST['surname'];
-            $age = $_POST['age'];
-
-            // Dane do połączenia z bazą
-            $serwer = "localhost";
-            $user = "root";
-            $pass = "";
-            $db = "uczniowie";
-
-            // Stwórz połączenie
-            $conn = mysqli_connect($serwer, $user, $pass, $db);
-
-            // Sprawdź połączenie
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            // Wyślij dane
-            $sql = "INSERT INTO `uczniowie`(`imie`, `nazwisko`, `wiek`) VALUES ('$name','$surname','$age');";
-
-            if ($conn->query($sql) === TRUE) {
-                echo "";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-
-            $conn->close();
-        } else {
-            echo "";
-        }
-
-        ?>
-
         <br> <br> <br>
 
         <form action="edit.php" method="POST">
             <label for="edit"> Uczeń do edytowania: </label>
             <select name="edit">
 
+                <!-- wyświetlanie selecta dla edytowania -->
                 <?php
 
                 $serwer = "localhost";
@@ -207,19 +208,41 @@
             <input type="submit" value="edytuj">
         </form>
 
+
+        <!-- edytowanie -->
         <?php
 
-        if (isset($_POST['edit'])) {
-            session_start();
-            $studentid = $_POST['edit'];
-            $_SESSION['id'] = $studentid;
-            header("Location: edit.php");
-            exit();
+        $studentid = isset($_POST['idEdit']) ? $_POST['idEdit'] : '';
+        
+        if (isset($_POST['nameEdit']) && isset($_POST['surnameEdit']) && isset($_POST['ageEdit'])) {
+
+            $editName = $_POST['nameEdit'];
+            $editSurname = $_POST['surnameEdit'];
+            $editAge = $_POST['ageEdit'];
+
+            $serwer = "localhost";
+            $user = "root";
+            $pass = "";
+            $db = "uczniowie";
+
+            $conn = mysqli_connect($serwer, $user, $pass, $db);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sqlEdit = "UPDATE `uczniowie` SET `imie`='$editName', `nazwisko`='$editSurname', `wiek`='$editAge' WHERE id = $studentid";
+
+            if ($conn->query($sqlEdit) === TRUE) {
+                echo "zedytowano rekord";
+            } else {
+                echo "Error: " . $sqlEdit . "<br>" . $conn->error;
+            }
         } else {
             echo "";
         }
-
         ?>
+
     </div>
 </body>
 
