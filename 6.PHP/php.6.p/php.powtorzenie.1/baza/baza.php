@@ -208,42 +208,8 @@
             <input type="submit" value="edytuj">
         </form>
 
-
-        <!-- edytowanie -->
-        <?php
-
-        $studentid = isset($_POST['idEdit']) ? $_POST['idEdit'] : '';
-        
-        if (isset($_POST['nameEdit']) && isset($_POST['surnameEdit']) && isset($_POST['ageEdit'])) {
-
-            $editName = $_POST['nameEdit'];
-            $editSurname = $_POST['surnameEdit'];
-            $editAge = $_POST['ageEdit'];
-
-            $serwer = "localhost";
-            $user = "root";
-            $pass = "";
-            $db = "uczniowie";
-
-            $conn = mysqli_connect($serwer, $user, $pass, $db);
-
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
-            $sqlEdit = "UPDATE `uczniowie` SET `imie`='$editName', `nazwisko`='$editSurname', `wiek`='$editAge' WHERE id = $studentid";
-
-            if ($conn->query($sqlEdit) === TRUE) {
-                echo "zedytowano rekord";
-            } else {
-                echo "Error: " . $sqlEdit . "<br>" . $conn->error;
-            }
-        } else {
-            echo "";
-        }
-        ?>
-
     </div>
+
 </body>
 
 </html>
