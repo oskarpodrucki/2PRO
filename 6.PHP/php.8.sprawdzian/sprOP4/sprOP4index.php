@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprOP</title>
+</head>
+
+<body>
+
+    <br>
+    <hr>
+    <br>
+
+    <form action="sprOP4edit.php" method="POST">
+        <?php
+
+        $host = "localhost";
+        $user = "root";
+        $password = "";
+        $database = "sprop";
+
+
+        $conn = mysqli_connect($host, $user, $password, $database);
+
+        if (!$conn) {
+            die("Błąd połączenia");
+        }
+
+
+        $sql = "SELECT `id`, `nazwa`, `cena` FROM `produkty`";
+        $results = mysqli_query($conn, $sql);
+
+        echo "<h1>edycja przy pomocy listy</h1>";
+
+        echo "<select name='idEdit'>";
+
+        if (mysqli_fetch_row($results) > 0) {
+            while ($row = mysqli_fetch_assoc($results)) {
+                echo "<option value=" . $row['id'] . ">nazwa: " . $row['nazwa'] . ", cena: " . $row['cena'] . "   <input type='submit' value='edytuj'> </option> ";
+            }
+        } else {
+            echo "brak rekordów";
+        }
+
+        echo "</select>";
+
+
+        ?>
+    </form>
+
+    <br> <br>
+    <hr>
+    <br>
+
+
+</body>
+
+</html>
