@@ -14,6 +14,9 @@
         if (isset($_POST['idEdit'])) {
 
             $idEdit = $_POST['idEdit'];
+            echo $idEdit;
+
+            echo "<br><br><br>";
 
             $host = "localhost";
             $user = "root";
@@ -32,8 +35,8 @@
             $results = mysqli_query($conn, $sql);
 
 
-            if (mysqli_fetch_assoc($results) > 0) {
-                while ($row = mysqli_fetch_row($results)) {
+            if (mysqli_num_rows($results) > 0) {
+                while ($row = mysqli_fetch_assoc($results)) {
                     echo "<input name=idEdit type='hidden' value=$idEdit>";
                     echo "<input type='text' name='nazwaEdit' placeholder='nazwa' value=" . $row['nazwa'] . "> <input type='number' name='cenaEdit' placeholder='cena' value=" . $row['cena'] . "> <input type='submit' value='Prześlij'>";
                 }
@@ -43,7 +46,7 @@
         ?>
     </form>
 
-    <br>
+    <br><br>
     <hr>
     <br>
 
@@ -71,7 +74,7 @@
         $sql = "UPDATE `produkty` SET `nazwa`='$name',`cena`='$price' WHERE id = $id";
 
         if (mysqli_query($conn, $sql) === TRUE) {
-            echo "dodano rekord";
+            echo "zdeitowano rekordzik byczq";
         } else {
             echo "błąd";
         }

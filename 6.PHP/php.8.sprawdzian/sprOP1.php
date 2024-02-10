@@ -26,7 +26,7 @@
             echo "$i <br>";
         }
     } else {
-        echo "Podaj liczbe do wymnożenia";
+        echo "Podaj liczbe do wypisania";
     }
 
     ?>

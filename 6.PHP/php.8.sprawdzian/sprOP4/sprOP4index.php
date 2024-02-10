@@ -36,15 +36,15 @@
 
         echo "<select name='idEdit'>";
 
-        if (mysqli_fetch_row($results) > 0) {
+        if (mysqli_num_rows($results) > 0) {
             while ($row = mysqli_fetch_assoc($results)) {
-                echo "<option value=" . $row['id'] . ">nazwa: " . $row['nazwa'] . ", cena: " . $row['cena'] . "   <input type='submit' value='edytuj'> </option> ";
+                echo "<option value=" . $row['id'] . "> nazwa: " . $row['nazwa'] . ", cena: " . $row['cena'] . "   ";
             }
         } else {
             echo "brak rekordów";
         }
 
-        echo "</select>";
+        echo "</select> <input type='submit' value='edytuj'> </option> ";
 
 
         ?>
