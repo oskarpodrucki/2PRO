@@ -7,5 +7,3 @@ if (strpos($napis, "@")) {
 } else {
     echo "nie";
 }
-
-
