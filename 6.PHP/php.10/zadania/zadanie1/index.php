@@ -2,6 +2,6 @@
 
 $napis = $_GET['napis'];
 
-echo $napis;
+echo $napis; //wyświetlenie napisu
 
 ?>
