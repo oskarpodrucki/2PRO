@@ -1,12 +1,5 @@
 <?php
 session_start();
-
-if($_SESSION['upr']!="admin"){
-    header("Location: ./index.php");
-}else{
-    echo "";
-}
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +7,7 @@ if($_SESSION['upr']!="admin"){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>strona admina</title>
+    <title>strona testowa</title>
     <style>
         body {
             background-color: <?php echo isset($_SESSION['bgColorAll']) && $_SESSION['bgColorAll'] === "ciemny" ? "#666666" : "whitesmoke"; ?>;
@@ -27,8 +20,14 @@ if($_SESSION['upr']!="admin"){
     <?php
     include "menu.php";
 
+    $_SESSION['zalogowano'] = false;
+    $_SESSION['login'] = "";
+    $_SESSION['upr'] = "";
+    echo "ZOSTAŁEŚ WYLOGOWANY";
 
-    echo $_SESSION["bgColorAll"];
+
+    header("Location: ./index.php");
+    sleep(3);
     ?>
 </body>
 
